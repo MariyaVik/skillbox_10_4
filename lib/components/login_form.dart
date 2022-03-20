@@ -40,7 +40,7 @@ class _LoginFormState extends State<LoginForm> {
               FilteringTextInputFormatter.digitsOnly
             ],
           ),
-          RaisedButton(
+          ElevatedButton(
             child: Text('Отправить'),
             onPressed: () {
               if (_formKey.currentState!.validate()) {

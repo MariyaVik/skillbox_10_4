@@ -32,7 +32,7 @@ class _LoginViewState extends State<LoginView> {
             child: Column(
               children: [
                 Expanded(
-                  child: Column(
+                  child: ListView(
                     children: [
                       Align(
                         alignment: Alignment.centerLeft,
@@ -52,15 +52,15 @@ class _LoginViewState extends State<LoginView> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      _formType == FormType.login
+                      _formType == FormType.register
                           ? 'Уже есть аккаунт?'
                           : 'Еще нет аккаунта? ',
                     ),
-                    FlatButton(
+                    TextButton(
                       child: RichText(
                         text: TextSpan(children: [
                           TextSpan(
-                            text: _formType == FormType.login
+                            text: _formType == FormType.register
                                 ? 'Войти'
                                 : 'Регистрация',
                           )
