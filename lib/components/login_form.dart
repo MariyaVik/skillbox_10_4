@@ -40,16 +40,19 @@ class _LoginFormState extends State<LoginForm> {
               FilteringTextInputFormatter.digitsOnly
             ],
           ),
-          ElevatedButton(
-            child: Text('Отправить'),
-            onPressed: () {
-              if (_formKey.currentState!.validate()) {
-                _formKey.currentState!.save();
-                setState(() {
-                  successMessage = true;
-                });
-              }
-            },
+          Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: ElevatedButton(
+              child: Text('Отправить'),
+              onPressed: () {
+                if (_formKey.currentState!.validate()) {
+                  _formKey.currentState!.save();
+                  setState(() {
+                    successMessage = true;
+                  });
+                }
+              },
+            ),
           ),
           if (successMessage) Text('Добро пожаловать'),
         ],

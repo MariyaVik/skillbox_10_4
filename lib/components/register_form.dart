@@ -59,9 +59,12 @@ class _RegisterFormState extends State<RegisterForm> {
               return null;
             },
           ),
-          ElevatedButton(
-            child: Text('Отправить'),
-            onPressed: _handleSubmit,
+          Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: ElevatedButton(
+              child: Text('Отправить'),
+              onPressed: _handleSubmit,
+            ),
           ),
           if (_isSuccess) Text('Вы успешно зарегистрировались')
         ],
